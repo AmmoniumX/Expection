@@ -13,13 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
 # Add doctest
-include(FetchContent)
-FetchContent_Declare(
-  doctest
-  GIT_REPOSITORY https://github.com/doctest/doctest.git
-  GIT_TAG master
-)
-FetchContent_MakeAvailable(doctest)
+add_subdirectory(doctest)
 
 # Add the /utf-8 flag for MSVC
 if(MSVC)
