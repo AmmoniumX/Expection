@@ -1,3 +1,7 @@
+#pragma once
+#ifndef EXPECTION_HPP
+#define EXPECTION_HPP
+
 #include <concepts>
 #include <expected>
 #include <stdexcept>
@@ -133,3 +137,5 @@ constexpr auto failure(E &&error) -> ResultType<Result, std::decay_t<E>, P> {
   }
 }
 } // namespace Expection
+
+#endif // ifndef EXPECTION_HPP
